@@ -1,0 +1,15 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: row;
+
+    background: #6e3ca2;
+    padding: 12px 148px;
+}
+
+.header__section {
+    margin-right: 35px;
+}
