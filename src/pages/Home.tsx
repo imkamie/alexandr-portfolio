@@ -1,7 +1,11 @@
+import DialogWindow from "../components/DialogWindow"
+
 function Home() {
     return (
         <>
-            <div>home</div>
+            <div className="home-page__window">
+                <DialogWindow />
+            </div>
         </>
     )
 }

@@ -1,0 +1,6 @@
+.dialog-window {
+    width: 900px;
+    height: 490px;
+    display: flex;
+    flex-direction: column;
+}

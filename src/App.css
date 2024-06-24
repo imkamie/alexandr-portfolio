@@ -1,6 +1,29 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-} */
+#root {
+  --bg-light: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(80, 86, 205, 0.01) 38.1%, rgba(150, 82, 228, 0.06) 70.1%, rgba(195, 80, 242, 0.1) 100%);
+  --bg-dark: linear-gradient(98deg, #000 22%, #23336d 67%, #4a398a 100%);
+
+  --bg-navbar-light: #6E3CA2;
+  --bg-navbar-dark: #2B1E57;
+
+  --text-primary-light: #000000;
+  --text-primary-dark: #ffffff;
+}
+
+.light {
+  --bg-main: var(--bg-light);
+  --bg-navbar: var(--bg-navbar-light);
+  --text-primary: var(--text-primary-light);
+}
+
+.dark {
+  --bg-main: var(--bg-dark);
+  --bg-navbar: var(--bg-navbar-dark);
+  --text-primary: var(--text-primary-dark);
+}
+
+.App {
+  min-width: 100vw;
+  min-height: 100vh;
+  background: var(--bg-main);
+  color: var(--text-primary);
+}
