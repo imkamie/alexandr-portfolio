@@ -31,7 +31,9 @@ function DialogWindow() {
                 <div className='dialog-window__info'>
                     <img src={photo} alt="photo" />
                     <div className='dialog-window__name'>
-                        <TerminalIcon size={51} fill={theme === 'light' ? "#000000" : "#FFFFFF"} />
+                        <div className='dialog-window__icon'>
+                            <TerminalIcon size={51} fill={theme === 'light' ? "#000000" : "#FFFFFF"} />
+                        </div>
                         <h1 onClick={resume} className={classNames('end-cursor', { ['blinking']: phase === TypePhase.Pausing })} aria-label={selectedQualification}>{typedQualification}</h1>
                     </div>
                 </div>

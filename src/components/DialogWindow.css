@@ -1,5 +1,5 @@
 .dialog-window {
-    max-width: 900px;
+    max-width: 927px;
     max-height: 490px;
     display: flex;
     flex-direction: column;
@@ -37,8 +37,12 @@
 
 .dialog-window__name {
     display: flex;
-    align-items: center;
+    align-items: start;
     gap: 18px;
+}
+
+.dialog-window__icon {
+    margin-top: 8px;
 }
 
 h1 {
