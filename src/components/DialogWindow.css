@@ -1,6 +1,89 @@
 .dialog-window {
-    width: 900px;
-    height: 490px;
+    max-width: 900px;
+    max-height: 490px;
     display: flex;
     flex-direction: column;
+    border: 2px solid var(--border-primary);
+    background: var(--bg-primary);
+}
+
+.dialog-window__header {
+    height: 41px;
+    background: linear-gradient(90deg, #4b3787 0%, #9756f2 22.1%, #7185f7 65.6%, #65b8f7 100%);
+    border-bottom: 2px solid var(--border-primary);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 9px;
+    padding: 0 9px;
+}
+
+.dialog-window__container {
+    padding: 24px 32px;
+}
+
+.dialog-window__container a {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+}
+
+.dialog-window__container p {
+    color: var(--text-secondary);
+    font-size: 20px;
+    letter-spacing: 0.05em;
+}
+
+.dialog-window__name {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 48px;
+    letter-spacing: -0.02em;
+}
+
+.dialog-window__info {
+    display: flex;
+    gap: 50px;
+    align-items: start;
+    margin-bottom: 15px;
+}
+
+.dialog-window__info img {
+    width: 100px;
+    border: 2px solid var(--border-primary);
+}
+
+.dialog-window__more {
+    margin-top: 55px;
+}
+
+.dialog-window__more strong {
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 0.05em;
+}
+
+.dialog-window__contacts strong {
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 0.05em;
+}
+
+.dialog-window__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 12px;
+}
+
+.dialog-window__contacts {
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }

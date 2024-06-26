@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import './App.css'
 import Header from './components/Header'
 import About from './pages/About'
@@ -9,6 +9,14 @@ import { ThemeContext } from './components/ThemeContext'
 
 function App() {
   const { theme } = useContext(ThemeContext)
+
+  useEffect(() => {
+    const root = document.getElementById('root');
+    if (root) {
+      root.className = theme === 'light' ? 'light' : 'dark';
+    }
+  }, [theme]);
+
 
   return (
     <div className={`App ${theme}`}>

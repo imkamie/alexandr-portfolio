@@ -1,29 +1,37 @@
 #root {
-  --bg-light: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(80, 86, 205, 0.01) 38.1%, rgba(150, 82, 228, 0.06) 70.1%, rgba(195, 80, 242, 0.1) 100%);
-  --bg-dark: linear-gradient(98deg, #000 22%, #23336d 67%, #4a398a 100%);
+  --bg-primary-light: #F6F6F6;
+  --bg-primary-dark: #1d1d1d;
 
   --bg-navbar-light: #6E3CA2;
   --bg-navbar-dark: #2B1E57;
 
+  --border-primary-light: #000000;
+  --border-primary-dark: #7a7a7a;
+
   --text-primary-light: #000000;
   --text-primary-dark: #ffffff;
+  --text-secondary-light: #4B4B4B;
+  --text-secondary-dark: #D7D7D7;
 }
 
 .light {
-  --bg-main: var(--bg-light);
+  --bg-primary: var(--bg-primary-light);
   --bg-navbar: var(--bg-navbar-light);
   --text-primary: var(--text-primary-light);
+  --border-primary: var(--border-primary-light);
+  --text-secondary: var(--text-secondary-light);
 }
 
 .dark {
-  --bg-main: var(--bg-dark);
+  --bg-primary: var(--bg-primary-dark);
   --bg-navbar: var(--bg-navbar-dark);
   --text-primary: var(--text-primary-dark);
+  --border-primary: var(--border-primary-dark);
+  --text-secondary: var(--text-secondary-dark)
 }
 
 .App {
   min-width: 100vw;
   min-height: 100vh;
-  background: var(--bg-main);
   color: var(--text-primary);
 }

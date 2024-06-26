@@ -1,10 +1,19 @@
-#root {
+:root {
   font-family: 'IBM Plex Mono';
+
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#root.light {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(80, 86, 205, 0.01) 38.1%, rgba(150, 82, 228, 0.06) 70.1%, rgba(195, 80, 242, 0.1) 100%);
+}
+
+#root.dark {
+  background: linear-gradient(98deg, #000 22%, #23336d 67%, #4a398a 100%);
 }
 
 * {
@@ -16,8 +25,8 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  /* min-width: 320px;
+  min-height: 100vh; */
 }
 
 .home-page__window {

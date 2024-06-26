@@ -7,7 +7,7 @@ interface ThemeContextProps {
 }
 
 const defaultValue: ThemeContextProps = {
-    theme: "light",
+    theme: "dark",
     toggleTheme: () => { },
 };
 
@@ -18,7 +18,7 @@ interface Props {
 }
 
 export const ThemeProvider: React.FC<Props> = ({ children }) => {
-    const [theme, setTheme] = useState<Theme>("light");
+    const [theme, setTheme] = useState<Theme>("dark");
 
     const toggleTheme = () => {
         setTheme(theme === "light" ? "dark" : "light");
