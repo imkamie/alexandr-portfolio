@@ -8,6 +8,9 @@
   --border-primary-light: #000000;
   --border-primary-dark: #7a7a7a;
 
+  --button-color-light: #8c5ac1;
+  --button-color-dark: #6450a8;
+
   --text-primary-light: #000000;
   --text-primary-dark: #ffffff;
   --text-secondary-light: #4B4B4B;
@@ -17,6 +20,7 @@
 .light {
   --bg-primary: var(--bg-primary-light);
   --bg-navbar: var(--bg-navbar-light);
+  --button-color: var(--button-color-light);
   --text-primary: var(--text-primary-light);
   --border-primary: var(--border-primary-light);
   --text-secondary: var(--text-secondary-light);
@@ -25,6 +29,7 @@
 .dark {
   --bg-primary: var(--bg-primary-dark);
   --bg-navbar: var(--bg-navbar-dark);
+  --button-color: var(--button-color-dark);
   --text-primary: var(--text-primary-dark);
   --border-primary: var(--border-primary-dark);
   --text-secondary: var(--text-secondary-dark)
