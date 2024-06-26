@@ -10,8 +10,13 @@ import LinkedinIcon from './icons/LInkedinIcon'
 import photo from '../assets/profile.webp'
 import { useContext } from 'react'
 import { ThemeContext } from './ThemeContext'
+import { TypePhase, useTypedQualification } from './useTypedQualifications'
+import classNames from 'classnames'
+
+const qualifications = ['Alexandr Dolgavin', 'Auburn University Grad', 'Security Professional', 'Researcher'];
 
 function DialogWindow() {
+    const { typedQualification, selectedQualification, phase, resume } = useTypedQualification(qualifications)
 
     const { theme } = useContext(ThemeContext)
 
@@ -27,7 +32,7 @@ function DialogWindow() {
                     <img src={photo} alt="photo" />
                     <div className='dialog-window__name'>
                         <TerminalIcon size={51} fill={theme === 'light' ? "#000000" : "#FFFFFF"} />
-                        <h1>Alexandr Dolgavin</h1>
+                        <h1 onClick={resume} className={classNames('end-cursor', { ['blinking']: phase === TypePhase.Pausing })} aria-label={selectedQualification}>{typedQualification}</h1>
                     </div>
                 </div>
                 <p>Master's degree in Cybersecurity. OSCP certified with a strong background in software engineering and cybersecurity. 4+ years of experience in cybersecurity, blockchain, and network security. Active participant in CTF and contributor to the security community.</p>

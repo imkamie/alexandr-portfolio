@@ -47,6 +47,21 @@ h1 {
     letter-spacing: -0.02em;
 }
 
+.end-cursor::after {
+    content: '|';
+    color: var(--text-primary);
+}
+
+.end-cursor.blinking::after {
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
 .dialog-window__info {
     display: flex;
     gap: 50px;
