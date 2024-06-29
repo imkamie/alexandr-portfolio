@@ -11,23 +11,42 @@ import MenuIcon from './icons/MenuIcon'
 
 import classNames from 'classnames'
 
-function Icon({ theme }: { theme: Theme }) {
-    if (theme === 'light') return <MoonIcon size={26} />
-    else return <SunIcon size={30} />
-}
 
 function Header() {
     const { toggleTheme, theme } = useContext(ThemeContext)
 
     const [open, setOpen] = useState(false)
+    const [width, setWidth] = useState(window.innerWidth)
 
     useEffect(() => {
         const handler = () => {
             setOpen(false)
         }
 
-        document.addEventListener("mousedown", handler)
+        window.addEventListener("mousedown", handler)
+
+        return () => {
+            window.removeEventListener('mousedown', handler)
+        }
     })
+
+    useEffect(() => {
+        const windowSizeHandler = () => {
+            setWidth(window.innerWidth)
+        }
+
+        window.addEventListener("resize", windowSizeHandler)
+
+        return () => {
+            window.removeEventListener("resize", windowSizeHandler)
+        }
+    })
+
+    function Icon({ theme }: { theme: Theme }) {
+        if (theme === 'light') return <MoonIcon size={width < 1024 ? 18 : 26} />
+        else return <SunIcon size={width < 1024 ? 20 : 30} />
+    }
+
 
     return (
         <div className='header'>
