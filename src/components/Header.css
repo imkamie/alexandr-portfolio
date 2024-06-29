@@ -120,6 +120,7 @@
         visibility: hidden;
         transform: translateY(-5px);
         transition: 0.3s ease;
+        transition-delay: 0.1s;
     }
 
     .header__item {
@@ -141,7 +142,6 @@
 
     .header {
         justify-content: space-between;
-        /* padding: 8px 40px; */
     }
 
     .header__section {

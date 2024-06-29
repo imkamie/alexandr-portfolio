@@ -3,7 +3,7 @@ import { headerSection } from '../store/index'
 import { Link } from 'react-router-dom'
 
 import { Theme, ThemeContext } from './ThemeContext'
-import { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 
 import MoonIcon from './icons/MoonIcon'
 import SunIcon from './icons/SunIcon'
@@ -18,15 +18,21 @@ function Header() {
     const [open, setOpen] = useState(false)
     const [width, setWidth] = useState(window.innerWidth)
 
+    const menuRef = React.createRef<HTMLButtonElement>()
+
     useEffect(() => {
-        const handler = () => {
-            setOpen(false)
+        const handler = (e: MouseEvent | TouchEvent) => {
+            if (!menuRef.current?.contains(e.target as Node)) {
+                setOpen(false)
+            }
         }
 
         window.addEventListener("mousedown", handler)
+        window.addEventListener("touchstart", handler)
 
         return () => {
             window.removeEventListener('mousedown', handler)
+            window.removeEventListener("touchstart", handler)
         }
     })
 
@@ -50,7 +56,7 @@ function Header() {
 
     return (
         <div className='header'>
-            <button onClick={() => { setOpen(!open) }} className='header__menu-button'> <MenuIcon size={24} /> </button>
+            <button ref={menuRef} onClick={() => { setOpen(!open) }} className='header__menu-button'> <MenuIcon size={24} /> </button>
 
             <ul className={classNames('header__list', { ['active']: open, ['inactive']: !open })}>
                 <Link to="/" className='header__item'>Home</Link>
