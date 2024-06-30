@@ -10,13 +10,14 @@ import SunIcon from './icons/SunIcon'
 import MenuIcon from './icons/MenuIcon'
 
 import classNames from 'classnames'
+import { useWindowWidth } from './useWindowWidth'
 
 
 function Header() {
     const { toggleTheme, theme } = useContext(ThemeContext)
+    const { width } = useWindowWidth()
 
     const [open, setOpen] = useState(false)
-    const [width, setWidth] = useState(window.innerWidth)
 
     const menuRef = React.createRef<HTMLButtonElement>()
 
@@ -33,18 +34,6 @@ function Header() {
         return () => {
             window.removeEventListener('mousedown', handler)
             window.removeEventListener("touchstart", handler)
-        }
-    })
-
-    useEffect(() => {
-        const windowSizeHandler = () => {
-            setWidth(window.innerWidth)
-        }
-
-        window.addEventListener("resize", windowSizeHandler)
-
-        return () => {
-            window.removeEventListener("resize", windowSizeHandler)
         }
     })
 

@@ -11,6 +11,8 @@
 
     background-color: var(--bg-navbar);
     padding: 12px 0;
+
+    z-index: 100;
 }
 
 .header__section {

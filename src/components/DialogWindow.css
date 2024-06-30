@@ -106,3 +106,117 @@ h1 {
     align-items: center;
     gap: 40px;
 }
+
+@media only screen and (max-width: 1024px) {
+    .dialog-window {
+        max-width: 85%;
+    }
+
+    .dialog-window__info {
+        gap: 30px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .dialog-window__icon {
+        margin-top: 8px;
+    }
+
+    .dialog-window__more {
+        margin-top: 40px;
+    }
+
+    .dialog-window__contacts {
+        gap: 26px;
+    }
+
+    .dialog-window__more strong,
+    .dialog-window__contacts strong {
+        font-size: 22px;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .dialog-window {
+        width: 80%;
+    }
+
+    .dialog-window__header {
+        height: 28px;
+    }
+
+    .dialog-window__container {
+        padding: 12px 12px;
+    }
+
+    .dialog-window__info {
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .dialog-window__info img {
+        width: 84px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .dialog-window__container p {
+        font-size: 12px;
+    }
+
+    .dialog-window__more {
+        margin-top: 24px;
+    }
+
+    .dialog-window__contacts {
+        gap: 20px;
+    }
+
+    .dialog-window__more strong,
+    .dialog-window__contacts strong {
+        font-size: 16px;
+    }
+
+    .dialog-window__container a {
+        font-size: 16px;
+    }
+
+    .dialog-window__name {
+        gap: 12px;
+    }
+
+    .dialog-window__icon {
+        margin-top: 3px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .dialog-window__container {
+        padding: 12px 8px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .dialog-window__details {
+        flex-direction: column;
+    }
+
+    .dialog-window__about-link {
+        margin-top: 16px;
+    }
+
+    .dialog-window__name {
+        gap: 10px;
+    }
+
+    .dialog-window__icon {
+        margin-top: 0;
+    }
+}
