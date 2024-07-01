@@ -2,9 +2,12 @@ import { useContext } from "react"
 import Education from "../components/Education"
 import Experience from "../components/Experience"
 import Skills from "../components/Skills"
+import Research from "../components/Research"
+import Reward from "../components/Rewards"
+import Certifications from "../components/Certifications"
 import TerminalIcon from "../components/icons/TerminalIcon"
 
-import { EducationInformation, ExperienceInformation, SkillsInformation } from "../store"
+import { EducationInformation, ExperienceInformation, SkillsInformation, ResearchInformation, RewardsInformation, CertificationsInformation } from "../store"
 import { ThemeContext } from "../components/ThemeContext"
 
 
@@ -47,7 +50,9 @@ function About() {
                     <Title title="Certifications" />
 
                     <div className="about-page__certifications-info">
-
+                        {CertificationsInformation.map((item, index) => (
+                            <Certifications certification={item} key={index} />
+                        ))}
                     </div>
                 </div>
 
@@ -65,7 +70,9 @@ function About() {
                     <Title title="research" />
 
                     <div className="about-page__research-info">
-
+                        {ResearchInformation.map((item, index) => (
+                            <Research research={item} key={index} />
+                        ))}
                     </div>
                 </div>
 
@@ -73,7 +80,9 @@ function About() {
                     <Title title="honors & rewards" />
 
                     <div className="about-page__rewards-info">
-
+                        {RewardsInformation.map((item, index) => (
+                            <Reward reward={item} key={index} />
+                        ))}
                     </div>
                 </div>
 

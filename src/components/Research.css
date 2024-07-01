@@ -1,0 +1,31 @@
+.research-info {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.research-info__ongoing {
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+}
+
+.research-info__research-link {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.research-info__research-link a {
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+    text-decoration-skip-ink: none;
+    color: var(--text-primary);
+}
+
+.research-info__research {
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+}

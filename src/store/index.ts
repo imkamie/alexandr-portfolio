@@ -150,14 +150,14 @@ export const SkillsInformation: SkillsInfo[] = [
     },
 ]
 
-export type ReseacrhInfo = {
+export type ResearchInfo = {
     name: string,
     hasLink: boolean,
     link?: string,
     ongoing: boolean,
 }
 
-export const ResearchInformation: ReseacrhInfo[] = [
+export const ResearchInformation: ResearchInfo[] = [
     {
         name: 'Sanitizing stenographic channels in STL files, ACM CODASPY 2024',
         hasLink: true,

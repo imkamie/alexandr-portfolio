@@ -82,6 +82,14 @@ body {
   gap: 40px;
 }
 
+.about-page__research-info,
+.about-page__rewards-info,
+.about-page__certifications-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 @media only screen and (max-width: 768px) {
   .home-page__window {
     padding-top: 20%;

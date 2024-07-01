@@ -1,0 +1,23 @@
+.rewards-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rewards-info__general {
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+}
+
+.rewards-info__name {
+    font-weight: 700;
+}
+
+.rewards-info__date {
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+    color: var(--text-secondary);
+}
