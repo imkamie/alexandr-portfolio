@@ -31,8 +31,42 @@ body {
   position: relative;
   display: flex;
   justify-content: center;
-  padding-top: 10%;
+  padding-top: 120px;
   padding-bottom: 30px;
+}
+
+.about-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 125px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-top: 120px;
+}
+
+.about-page h3 {
+  font-weight: 700;
+  font-size: 48px;
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+}
+
+.about-page__terminal-icon {
+  margin-top: 8px;
+}
+
+.about-page__header {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 51px;
+}
+
+.about-page__education-info {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }
 
 @media only screen and (max-width: 768px) {

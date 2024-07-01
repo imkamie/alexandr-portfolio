@@ -1,0 +1,35 @@
+.education-info {
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    color: var(--text-secondary);
+}
+
+.education-info__uni-and-date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.education-info__university {
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+}
+
+.education-info__date {
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+    color: #d7d7d7;
+    color: var(--text-secondary);
+}
+
+.education-info__degree {
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+}

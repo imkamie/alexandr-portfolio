@@ -9,14 +9,14 @@ export const headerSection: string[] = [
     'Volunteering'
 ]
 
-type EducationInfo = {
+export type EducationInfo = {
     university: string,
     degree: string,
     major: string,
     graduationDate: string
 }
 
-export const Education: EducationInfo[] = [
+export const EducationInformation: EducationInfo[] = [
     {
         university: 'Auburn University',
         degree: 'Ph.D.',
@@ -37,7 +37,7 @@ export const Education: EducationInfo[] = [
     }
 ]
 
-type ExperienceInfo = {
+export type ExperienceInfo = {
     position: string,
     company: string,
     locatoin: string,
@@ -99,7 +99,7 @@ export const Experience: ExperienceInfo[] = [
     },
 ]
 
-type CertificationInfo = {
+export type CertificationInfo = {
     name: string,
     hasLink: boolean,
     link?: string,
@@ -130,7 +130,7 @@ export const Certifications: CertificationInfo[] = [
     },
 ]
 
-type SkillsInfo = {
+export type SkillsInfo = {
     skillsGroup: string,
     skills: string[]
 }
@@ -150,7 +150,7 @@ export const Skills: SkillsInfo[] = [
     },
 ]
 
-type ReseacrhInfo = {
+export type ReseacrhInfo = {
     name: string,
     hasLink: boolean,
     link?: string,
@@ -177,7 +177,7 @@ export const Research: ReseacrhInfo[] = [
 
 ]
 
-type RewardsInfo = {
+export type RewardsInfo = {
     name: string,
     organization: string,
     date: string
@@ -202,7 +202,7 @@ export const Rewards: RewardsInfo[] = [
 
 ]
 
-type ProjectsInfo = {
+export type ProjectsInfo = {
     name: string,
     hasLink: boolean,
     link?: string,
@@ -226,13 +226,13 @@ export const Projects: ProjectsInfo[] = [
         link: 'https://github.com/AM-security/STL-channels-encoder',
         date: '2023',
         description: ['Hacking Tools / Python',
-            'Project Scope: Create a library allowing hiding information inside STL files. Support inserting and extracting any type of information. The encoded information must be undetectable.',
+            'Project Scope: Create a library allowing hiding information inside STL files. Support inserting and extracting any export type of information. The encoded information must be undetectable.',
         ]
     },
 
 ]
 
-type VolunteeringInfo = {
+export type VolunteeringInfo = {
     position: string,
     organization: string,
     dates: string,
