@@ -45,6 +45,7 @@ body {
   max-width: 1180px;
   margin: 0 auto;
   padding-top: 120px;
+  padding-bottom: 125px;
 }
 
 .about-page h3 {
@@ -70,7 +71,9 @@ body {
 }
 
 .about-page__education-info,
-.about-page__skills-info {
+.about-page__skills-info,
+.about-page__projects-info,
+.about-page__volunteering-info {
   display: flex;
   flex-direction: column;
   gap: 28px;

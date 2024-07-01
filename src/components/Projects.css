@@ -1,0 +1,60 @@
+.projects-info {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.projects-info__general {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-info__project-link {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 0.05em;
+    text-decoration-skip-ink: none;
+    color: var(--text-primary);
+}
+
+.project-info__project {
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 0.05em;
+    text-decoration-skip-ink: none;
+}
+
+.projects-info__dates {
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+    color: var(--text-secondary);
+}
+
+.projects-info__contributions {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.projects-info__contribution {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    color: var(--text-secondary);
+}
+
+.projects-info__icon {
+    margin-top: 3px;
+}

@@ -1,0 +1,40 @@
+.volunteering {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.volunteering-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.volunteering-info__date {
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+    color: var(--text-secondary);
+}
+
+.volunteering-info__general {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+}
+
+.volunteering-info__position {
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+}
+
+.volunteering-info__description {
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    color: var(--text-secondary);
+}

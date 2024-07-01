@@ -5,9 +5,11 @@ import Skills from "../components/Skills"
 import Research from "../components/Research"
 import Reward from "../components/Rewards"
 import Certifications from "../components/Certifications"
+import Projects from "../components/Projects"
+import Volunteering from "../components/Volunteering"
 import TerminalIcon from "../components/icons/TerminalIcon"
 
-import { EducationInformation, ExperienceInformation, SkillsInformation, ResearchInformation, RewardsInformation, CertificationsInformation } from "../store"
+import { EducationInformation, ExperienceInformation, SkillsInformation, ResearchInformation, RewardsInformation, CertificationsInformation, ProjectsInformation, VolunteeringInformation } from "../store"
 import { ThemeContext } from "../components/ThemeContext"
 
 
@@ -90,7 +92,9 @@ function About() {
                     <Title title="projects" />
 
                     <div className="about-page__projects-info">
-
+                        {ProjectsInformation.map((item, index) => (
+                            <Projects project={item} key={index} />
+                        ))}
                     </div>
                 </div>
 
@@ -98,7 +102,9 @@ function About() {
                     <Title title="volunteer experience" />
 
                     <div className="about-page__volunteering-info">
-
+                        {VolunteeringInformation.map((item, index) => (
+                            <Volunteering volunteering={item} key={index} />
+                        ))}
                     </div>
                 </div>
             </div>
