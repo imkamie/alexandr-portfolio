@@ -1,9 +1,10 @@
 import { useContext } from "react"
 import Education from "../components/Education"
 import Experience from "../components/Experience"
+import Skills from "../components/Skills"
 import TerminalIcon from "../components/icons/TerminalIcon"
 
-import { EducationInformation, ExperienceInformation } from "../store"
+import { EducationInformation, ExperienceInformation, SkillsInformation } from "../store"
 import { ThemeContext } from "../components/ThemeContext"
 
 
@@ -54,7 +55,9 @@ function About() {
                     <Title title="skills" />
 
                     <div className="about-page__skills-info">
-
+                        {SkillsInformation.map((item, index) => (
+                            <Skills skill={item} key={index} />
+                        ))}
                     </div>
                 </div>
 

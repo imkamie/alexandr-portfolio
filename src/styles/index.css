@@ -69,7 +69,8 @@ body {
   gap: 51px;
 }
 
-.about-page__education-info {
+.about-page__education-info,
+.about-page__skills-info {
   display: flex;
   flex-direction: column;
   gap: 28px;

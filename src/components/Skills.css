@@ -1,0 +1,33 @@
+.skills-info {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.skills-info__group {
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 0.05em;
+}
+
+.skills-info__skills {
+    display: flex;
+    flex-direction: row;
+    gap: 10px 40px;
+    flex-wrap: wrap;
+}
+
+.skills-info__skill {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    color: var(--text-secondary);
+}
+
+
+.skills-info__icon {
+    margin-top: 3px;
+}
