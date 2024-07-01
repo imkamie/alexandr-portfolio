@@ -45,7 +45,7 @@ export type ExperienceInfo = {
     contributions: string[]
 }
 
-export const Experience: ExperienceInfo[] = [
+export const ExperienceInformation: ExperienceInfo[] = [
     {
         position: 'Security Research Fellow',
         company: 'Auburn University',
@@ -63,7 +63,7 @@ export const Experience: ExperienceInfo[] = [
         locatoin: 'Moscow, Russia',
         dates: '08/2019 - 02/2020',
         contributions: ['Developed a network and OS tracking tool to protect valuable assets from IP theft on Linux & Windows.',
-            'Developed and integrated a honeypot for the web service security systems to observe threat actors` behavior.',
+            "Developed and integrated a honeypot for the web service security systems to observe threat actors' behavior.",
         ]
     },
     {
@@ -72,7 +72,7 @@ export const Experience: ExperienceInfo[] = [
         locatoin: 'Dubai, UAE',
         dates: '09/2021 - 08/2022',
         contributions: ['Implemented a robust monitoring system in Golang for blockchain nodes, allowing the early detection of suspicious activities and preventing potential financial losses.',
-            'Found a critical vulnerability in the blockchain protocol allowing clients to withdraw assets they don`t have.',
+            "Found a critical vulnerability in the blockchain protocol allowing clients to withdraw assets they don't have.",
             'Identified and resolved minor security issues in application logic preventing blockchain forks and financial losses.',
             'Fixed multiple blockchain-specific bottlenecks and improved the network performance by approximately 15%.'
         ]
@@ -94,7 +94,7 @@ export const Experience: ExperienceInfo[] = [
         company: 'VK',
         locatoin: 'Moscow, Russia',
         dates: '02/2020 - 08/2020',
-        contributions: ['Developed a 3rd party app for the Calendar to automate the search of the optimal time that accommodates all event participants and integrated voice support enhancing the user`s experience.',
+        contributions: ["Developed a 3rd party app for the Calendar to automate the search of the optimal time that accommodates all event participants and integrated voice support enhancing the user's experience.",
         ]
     },
 ]
@@ -107,7 +107,7 @@ export type CertificationInfo = {
     date: string
 }
 
-export const Certifications: CertificationInfo[] = [
+export const CertificationsInformation: CertificationInfo[] = [
     {
         name: 'OSCP (Offensive Security Certified Professional)',
         hasLink: true,
@@ -135,7 +135,7 @@ export type SkillsInfo = {
     skills: string[]
 }
 
-export const Skills: SkillsInfo[] = [
+export const SkillsInformation: SkillsInfo[] = [
     {
         skillsGroup: 'Programming Languges',
         skills: ['C/C++', 'Golang', 'Python', 'Bash', 'Rust', 'SQL']
@@ -157,7 +157,7 @@ export type ReseacrhInfo = {
     ongoing: boolean,
 }
 
-export const Research: ReseacrhInfo[] = [
+export const ResearchInformation: ReseacrhInfo[] = [
     {
         name: 'Sanitizing stenographic channels in STL files, ACM CODASPY 2024',
         hasLink: true,
@@ -183,9 +183,9 @@ export type RewardsInfo = {
     date: string
 }
 
-export const Rewards: RewardsInfo[] = [
+export const RewardsInformation: RewardsInfo[] = [
     {
-        name: 'Outstanding Master`s Student Award',
+        name: "Outstanding Master's Student Award",
         organization: 'Auburn University',
         date: '03/2024'
     },
@@ -210,7 +210,7 @@ export type ProjectsInfo = {
     description: string[]
 }
 
-export const Projects: ProjectsInfo[] = [
+export const ProjectsInformation: ProjectsInfo[] = [
     {
         name: 'Secure Cloud Computing',
         hasLink: false,
@@ -239,7 +239,7 @@ export type VolunteeringInfo = {
     description: string
 }
 
-export const Volunteering: VolunteeringInfo[] = [
+export const VolunteeringInformation: VolunteeringInfo[] = [
     {
         position: 'Cybersecurity Mentor',
         organization: 'Microsoft TEALS',

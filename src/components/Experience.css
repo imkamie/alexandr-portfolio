@@ -1,0 +1,49 @@
+.experience-info__general {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.experience-info__position {
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+}
+
+.experience-info__dates {
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+    color: var(--text-secondary);
+}
+
+.experience-info__location {
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    margin: 18px 0 30px;
+}
+
+.experience-info__contributions {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.experience-info__icon {
+    margin-top: 3px;
+}
+
+.experience-info__contribution {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    color: var(--text-secondary);
+}

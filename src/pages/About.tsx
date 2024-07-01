@@ -1,8 +1,9 @@
 import { useContext } from "react"
 import Education from "../components/Education"
+import Experience from "../components/Experience"
 import TerminalIcon from "../components/icons/TerminalIcon"
 
-import { EducationInformation } from "../store"
+import { EducationInformation, ExperienceInformation } from "../store"
 import { ThemeContext } from "../components/ThemeContext"
 
 
@@ -21,7 +22,7 @@ function About() {
     return (
         <>
             <div className="about-page">
-                <div className="about-page__education">
+                <div className="about-page__section">
                     <Title title="Education" />
 
                     <div className="about-page__education-info">
@@ -31,15 +32,17 @@ function About() {
                     </div>
                 </div>
 
-                <div className="about-page__experience">
+                <div className="about-page__section">
                     <Title title="Experience" />
 
                     <div className="about-page__experience-info">
-
+                        {ExperienceInformation.map((item, index) => (
+                            <Experience experience={item} key={index} />
+                        ))}
                     </div>
                 </div>
 
-                <div className="about-page__certifications">
+                <div className="about-page__section">
                     <Title title="Certifications" />
 
                     <div className="about-page__certifications-info">
@@ -47,7 +50,7 @@ function About() {
                     </div>
                 </div>
 
-                <div className="about-page__skills">
+                <div className="about-page__section">
                     <Title title="skills" />
 
                     <div className="about-page__skills-info">
@@ -55,7 +58,7 @@ function About() {
                     </div>
                 </div>
 
-                <div className="about-page__research">
+                <div className="about-page__section">
                     <Title title="research" />
 
                     <div className="about-page__research-info">
@@ -63,7 +66,7 @@ function About() {
                     </div>
                 </div>
 
-                <div className="about-page__rewards">
+                <div className="about-page__section">
                     <Title title="honors & rewards" />
 
                     <div className="about-page__rewards-info">
@@ -71,7 +74,7 @@ function About() {
                     </div>
                 </div>
 
-                <div className="about-page__projects">
+                <div className="about-page__section">
                     <Title title="projects" />
 
                     <div className="about-page__projects-info">
@@ -79,7 +82,7 @@ function About() {
                     </div>
                 </div>
 
-                <div className="about-page__volunteering">
+                <div className="about-page__section">
                     <Title title="volunteer experience" />
 
                     <div className="about-page__volunteering-info">

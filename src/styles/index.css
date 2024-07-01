@@ -25,6 +25,7 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
+  overflow-x: hidden;
 }
 
 .home-page__window {
@@ -60,13 +61,24 @@ body {
 .about-page__header {
   display: flex;
   gap: 18px;
-  margin-bottom: 51px;
+}
+
+.about-page__section {
+  display: flex;
+  flex-direction: column;
+  gap: 51px;
 }
 
 .about-page__education-info {
   display: flex;
   flex-direction: column;
   gap: 28px;
+}
+
+.about-page__experience-info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 @media only screen and (max-width: 768px) {
