@@ -11,15 +11,19 @@ import TerminalIcon from "../components/icons/TerminalIcon"
 
 import { EducationInformation, ExperienceInformation, SkillsInformation, ResearchInformation, RewardsInformation, CertificationsInformation, ProjectsInformation, VolunteeringInformation } from "../store"
 import { ThemeContext } from "../components/ThemeContext"
+import { useWindowWidth } from "../components/useWindowWidth"
 
 
 function About() {
     const { theme } = useContext(ThemeContext)
+    const { width } = useWindowWidth()
 
     function Title({ title }: { title: string }) {
         return (
             <div className="about-page__header">
-                <div className="about-page__terminal-icon"><TerminalIcon size={51} fill={theme === 'light' ? "#000000" : "#FFFFFF"} /></div>
+                <div className="about-page__terminal-icon">
+                    <TerminalIcon size={width < 577 ? 32 : width < 769 ? 36 : 51} fill={theme === 'light' ? "#000000" : "#FFFFFF"} />
+                </div>
                 <h3>{title}</h3>
             </div>
         )

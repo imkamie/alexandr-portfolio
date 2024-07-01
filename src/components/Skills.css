@@ -31,3 +31,49 @@
 .skills-info__icon {
     margin-top: 3px;
 }
+
+@media only screen and (max-width: 768px) {
+    .skills-info {
+        gap: 8px;
+    }
+
+    .skills-info__group {
+        font-size: 20px;
+    }
+
+    .skills-info__skills {
+        gap: 6px 22px;
+    }
+
+    .skills-info__skill {
+        gap: 10px;
+        font-size: 18px;
+    }
+
+    .skills-info__icon {
+        margin-top: 4px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .skills-info {
+        gap: 6px;
+    }
+
+    .skills-info__group {
+        font-size: 18px;
+    }
+
+    .skills-info__skills {
+        gap: 5px 20px;
+    }
+
+    .skills-info__skill {
+        gap: 8px;
+        font-size: 16px;
+    }
+
+    .skills-info__icon {
+        margin-top: 3px;
+    }
+}

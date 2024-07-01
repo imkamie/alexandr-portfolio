@@ -3,9 +3,11 @@ import { ExperienceInfo } from "../store"
 import TerminalIcon from "./icons/TerminalIcon"
 import { useContext } from "react"
 import { ThemeContext } from "./ThemeContext"
+import { useWindowWidth } from "./useWindowWidth"
 
 function Experience({ experience }: { experience: ExperienceInfo }) {
     const { theme } = useContext(ThemeContext)
+    const { width } = useWindowWidth()
 
     return (
         <div className="experience-info">
@@ -17,7 +19,9 @@ function Experience({ experience }: { experience: ExperienceInfo }) {
             <ul className="experience-info__contributions">
                 {experience.contributions.map((item, index) => (
                     <li className="experience-info__contribution" key={index}>
-                        <div className="experience-info__icon"><TerminalIcon size={20} fill={theme === 'light' ? "#4b4b4b" : "#d7d7d7"} /></div>
+                        <div className="experience-info__icon">
+                            <TerminalIcon size={width < 577 ? 16 : width < 769 ? 18 : 20} fill={theme === 'light' ? "#4b4b4b" : "#d7d7d7"} />
+                        </div>
                         {item}
                     </li>
                 ))}

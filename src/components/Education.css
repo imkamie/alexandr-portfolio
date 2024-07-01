@@ -7,6 +7,7 @@
 
 .education-info__uni-and-date {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 6px;
@@ -20,10 +21,10 @@
 }
 
 .education-info__date {
+    text-align: end;
     font-weight: 400;
     font-size: 24px;
     letter-spacing: -0.02em;
-    color: #d7d7d7;
     color: var(--text-secondary);
 }
 
@@ -32,4 +33,38 @@
     font-size: 20px;
     letter-spacing: -0.02em;
     color: var(--text-primary);
+}
+
+@media only screen and (max-width: 768px) {
+
+    .education-info,
+    .education-info__degree {
+        font-size: 18px;
+    }
+
+    .education-info__uni-and-date {
+        margin-bottom: 4px;
+    }
+
+    .education-info__university,
+    .education-info__date {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
+    .education-info,
+    .education-info__degree {
+        font-size: 16px;
+    }
+
+    .education-info__uni-and-date {
+        margin-bottom: 4px;
+    }
+
+    .education-info__university,
+    .education-info__date {
+        font-size: 18px;
+    }
 }

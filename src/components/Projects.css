@@ -58,3 +58,61 @@
 .projects-info__icon {
     margin-top: 3px;
 }
+
+@media only screen and (max-width: 768px) {
+    .projects-info {
+        gap: 10px;
+    }
+
+    .project-info__project-link {
+        gap: 10px;
+        font-size: 20px;
+    }
+
+    .project-info__project,
+    .projects-info__dates {
+        font-size: 20px;
+    }
+
+    .projects-info__contributions {
+        gap: 6px;
+    }
+
+    .projects-info__contribution {
+        font-size: 18px;
+        gap: 10px;
+    }
+
+    .projects-info__icon {
+        margin-top: 4px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .projects-info {
+        gap: 8px;
+    }
+
+    .project-info__project-link {
+        gap: 8px;
+        font-size: 18px;
+    }
+
+    .project-info__project,
+    .projects-info__dates {
+        font-size: 18px;
+    }
+
+    .projects-info__contributions {
+        gap: 5px;
+    }
+
+    .projects-info__contribution {
+        font-size: 16px;
+        gap: 8px;
+    }
+
+    .projects-info__icon {
+        margin-top: 3px;
+    }
+}

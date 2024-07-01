@@ -21,3 +21,27 @@
     letter-spacing: -0.02em;
     color: var(--text-secondary);
 }
+
+@media only screen and (max-width: 768px) {
+    .rewards-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .rewards-info__general,
+    .rewards-info__date {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .rewards-info {
+        gap: 6px;
+    }
+
+    .rewards-info__general,
+    .rewards-info__date {
+        font-size: 18px;
+    }
+}

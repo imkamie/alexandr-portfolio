@@ -12,6 +12,7 @@
 }
 
 .experience-info__dates {
+    text-align: end;
     font-weight: 400;
     font-size: 24px;
     letter-spacing: -0.02em;
@@ -46,4 +47,58 @@
     font-size: 20px;
     letter-spacing: -0.02em;
     color: var(--text-secondary);
+}
+
+@media only screen and (max-width: 768px) {
+    .experience-info__general {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .experience-info__position,
+    .experience-info__dates {
+        font-size: 20px;
+    }
+
+    .experience-info__location {
+        font-size: 18px;
+        margin: 6px 0 10px;
+    }
+
+    .experience-info__contributions {
+        gap: 7px;
+    }
+
+    .experience-info__icon {
+        margin-top: 4px;
+    }
+
+    .experience-info__contribution {
+        gap: 10px;
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
+    .experience-info__position,
+    .experience-info__dates {
+        font-size: 18px;
+    }
+
+    .experience-info__location {
+        font-size: 16px;
+        margin: 5px 0 9px;
+    }
+
+    .experience-info__icon {
+        margin-top: 3px;
+    }
+
+    .experience-info__contribution {
+        gap: 8px;
+        font-size: 16px;
+    }
 }

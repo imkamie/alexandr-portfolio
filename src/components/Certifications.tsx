@@ -24,12 +24,9 @@ function Certifications({ certification }: { certification: CertificationInfo })
         <div className='certification-info'>
             <div className='certification-info__general'>
                 {certification.hasLink ?
-                    <div className='certification-info__certification-link'>
-                        <a href={certification.link} target='_blank'>{certification.name}</a>
-                        <div>
-                            <LinkIcon size={15} fill={theme === 'light' ? "#000000" : "#ffffff"} />
-                        </div>
-                    </div>
+                    <a className='certification-info__certification' href={certification.link} target='_blank'>{certification.name}
+                        <sup><LinkIcon size={15} fill={theme === 'light' ? "#000000" : "#ffffff"} /></sup>
+                    </a>
                     : <span className='certification-info__certification'>{certification.name}</span>
                 }
                 <span className='certification-info__organization'>, {renderOrganization()}</span>

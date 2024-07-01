@@ -5,30 +5,12 @@
     justify-content: space-between;
 }
 
-.certification-info__general {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.certification-info__certification-link {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-}
-
-.certification-info__certification-link a {
+.certification-info__certification {
     font-weight: 700;
     font-size: 24px;
     letter-spacing: -0.02em;
     text-decoration-skip-ink: none;
     color: var(--text-primary);
-}
-
-.certification-info__certification {
-    font-weight: 700;
-    font-size: 24px;
-    letter-spacing: -0.02em;
 }
 
 .certification-info__organization {
@@ -42,4 +24,45 @@
     font-size: 24px;
     letter-spacing: -0.02em;
     color: var(--text-secondary);
+}
+
+@media only screen and (max-width: 1024px) {}
+
+
+@media only screen and (max-width: 768px) {
+    .certification-info {
+        flex-direction: column;
+        align-items: baseline;
+        gap: 4px;
+    }
+
+    .certification-info__certification {
+        font-size: 20px;
+    }
+
+    .certification-info__organization {
+        font-size: 20px;
+    }
+
+    .certification-info__date {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .certification-info {
+        gap: 6px;
+    }
+
+    .certification-info__certification {
+        font-size: 18px;
+    }
+
+    .certification-info__organization {
+        font-size: 18px;
+    }
+
+    .certification-info__date {
+        font-size: 18px;
+    }
 }

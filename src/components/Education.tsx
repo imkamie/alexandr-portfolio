@@ -8,7 +8,7 @@ function Education({ education }: { education: EducationInfo }) {
                 <div className='education-info__university'>{education.university}</div>
                 <div className='education-info__date'>{education.graduationDate}</div>
             </div>
-            <span className='education-info__degree'>{education.degree}</span> {education.major}
+            <span className='education-info__degree'>{education.degree}</span> in {education.major}
         </div>
     )
 }
