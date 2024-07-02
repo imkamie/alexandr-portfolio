@@ -50,13 +50,13 @@ function Header() {
             <ul className={classNames('header__list', { ['active']: open, ['inactive']: !open })}>
                 <Link to="/" className='header__item'>Home</Link>
                 {headerSection.map((item, index) => (
-                    <Link to="/about" className='header__item' key={index}>{item}</Link>
+                    <Link to={`/about#${item}`} className='header__item' key={index}>{item}</Link>
                 ))}
             </ul>
 
             <Link to="/" className='header__section'>Home</Link>
             {headerSection.map((item, index) => (
-                <Link to="/about" className='header__section' key={index}>{item}</Link>
+                <Link to={`/about#${item}`} className='header__section' key={index}>{item}</Link>
             ))}
 
             <button onClick={toggleTheme} className='header__theme-button'> <Icon theme={theme} /> </button>

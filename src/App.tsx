@@ -3,6 +3,7 @@ import './App.css'
 import Header from './components/Header'
 import About from './pages/About'
 import Home from './pages/Home'
+import ScrollToAnchor from './components/useScrollToAnchor'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ThemeContext } from './components/ThemeContext'
@@ -21,6 +22,7 @@ function App() {
   return (
     <div className={`App ${theme}`}>
       <BrowserRouter>
+        <ScrollToAnchor />
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />

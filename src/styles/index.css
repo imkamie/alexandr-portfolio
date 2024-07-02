@@ -26,6 +26,7 @@ body {
   display: flex;
   place-items: center;
   overflow-x: hidden;
+  /* padding-top: 50px; */
 }
 
 .home-page__window {
@@ -66,6 +67,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 51px;
+  scroll-margin: 90px;
 }
 
 .about-page__education-info,
@@ -95,11 +97,19 @@ body {
   .about-page {
     max-width: 960px;
   }
+
+  .about-page__section {
+    scroll-margin: 80px;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
   .about-page {
     padding: 120px 60px;
+  }
+
+  .about-page__section {
+    scroll-margin: 60px;
   }
 }
 

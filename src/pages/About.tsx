@@ -32,7 +32,7 @@ function About() {
     return (
         <>
             <div className="about-page">
-                <div className="about-page__section">
+                <div id="education" className="about-page__section">
                     <Title title="Education" />
 
                     <div className="about-page__education-info">
@@ -42,7 +42,7 @@ function About() {
                     </div>
                 </div>
 
-                <div className="about-page__section">
+                <div id="experience" className="about-page__section">
                     <Title title="Experience" />
 
                     <div className="about-page__experience-info">
@@ -52,7 +52,7 @@ function About() {
                     </div>
                 </div>
 
-                <div className="about-page__section">
+                <div id="certifications" className="about-page__section">
                     <Title title="Certifications" />
 
                     <div className="about-page__certifications-info">
@@ -62,7 +62,7 @@ function About() {
                     </div>
                 </div>
 
-                <div className="about-page__section">
+                <div id="skills" className="about-page__section">
                     <Title title="skills" />
 
                     <div className="about-page__skills-info">
@@ -72,7 +72,7 @@ function About() {
                     </div>
                 </div>
 
-                <div className="about-page__section">
+                <div id="research" className="about-page__section">
                     <Title title="research" />
 
                     <div className="about-page__research-info">
@@ -82,7 +82,7 @@ function About() {
                     </div>
                 </div>
 
-                <div className="about-page__section">
+                <div id="rewards" className="about-page__section">
                     <Title title="honors & rewards" />
 
                     <div className="about-page__rewards-info">
@@ -92,7 +92,7 @@ function About() {
                     </div>
                 </div>
 
-                <div className="about-page__section">
+                <div id="projects" className="about-page__section">
                     <Title title="projects" />
 
                     <div className="about-page__projects-info">
@@ -102,7 +102,7 @@ function About() {
                     </div>
                 </div>
 
-                <div className="about-page__section">
+                <div id="volunteering" className="about-page__section">
                     <Title title="volunteer experience" />
 
                     <div className="about-page__volunteering-info">
