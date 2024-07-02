@@ -1,12 +1,12 @@
 import './Projects.css'
 import { useContext } from 'react'
 
+import { ThemeContext } from '../hooks/useThemeContext'
+import { useWindowWidth } from '../hooks/useWindowWidth'
 import { ProjectsInfo } from '../types'
 
 import GithubIcon from './icons/GithubIcon'
 import TerminalIcon from './icons/TerminalIcon'
-import { ThemeContext } from './ThemeContext'
-import { useWindowWidth } from './useWindowWidth'
 
 function Projects({ project }: { project: ProjectsInfo }) {
   const { theme } = useContext(ThemeContext)

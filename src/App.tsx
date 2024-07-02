@@ -3,8 +3,8 @@ import { useContext, useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Header from './components/Header'
-import { ThemeContext } from './components/ThemeContext'
-import ScrollToAnchor from './components/useScrollToAnchor'
+import ScrollToAnchor from './hooks/useScrollToAnchor'
+import { ThemeContext } from './hooks/useThemeContext'
 import About from './pages/About'
 import Home from './pages/Home'
 

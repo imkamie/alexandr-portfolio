@@ -8,9 +8,9 @@ import Projects from '../components/Projects'
 import Research from '../components/Research'
 import Reward from '../components/Rewards'
 import Skills from '../components/Skills'
-import { ThemeContext } from '../components/ThemeContext'
-import { useWindowWidth } from '../components/useWindowWidth'
 import Volunteering from '../components/Volunteering'
+import { ThemeContext } from '../hooks/useThemeContext'
+import { useWindowWidth } from '../hooks/useWindowWidth'
 import {
   EducationInformation,
   ExperienceInformation,

@@ -4,6 +4,9 @@ import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 
 import photo from '../assets/profile.jpg'
+import { ThemeContext } from '../hooks/useThemeContext'
+import { TypePhase, useTypedQualification } from '../hooks/useTypedQualifications'
+import { useWindowWidth } from '../hooks/useWindowWidth'
 import { qualifications, description, githubLink, linkedinLink, email } from '../store'
 
 import CloseIcon from './icons/CloseIcon'
@@ -12,9 +15,6 @@ import LinkedinIcon from './icons/LInkedinIcon'
 import MaxIcon from './icons/MaxIcon'
 import MinIcon from './icons/MinIcon'
 import TerminalIcon from './icons/TerminalIcon'
-import { ThemeContext } from './ThemeContext'
-import { TypePhase, useTypedQualification } from './useTypedQualifications'
-import { useWindowWidth } from './useWindowWidth'
 
 function DialogWindow() {
   const { typedQualification, selectedQualification, phase, resume } =

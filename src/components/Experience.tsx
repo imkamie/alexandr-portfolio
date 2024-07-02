@@ -1,11 +1,11 @@
 import './Experience.css'
 import { useContext } from 'react'
 
+import { ThemeContext } from '../hooks/useThemeContext'
+import { useWindowWidth } from '../hooks/useWindowWidth'
 import { ExperienceInfo } from '../types'
 
 import TerminalIcon from './icons/TerminalIcon'
-import { ThemeContext } from './ThemeContext'
-import { useWindowWidth } from './useWindowWidth'
 
 function Experience({ experience }: { experience: ExperienceInfo }) {
   const { theme } = useContext(ThemeContext)
