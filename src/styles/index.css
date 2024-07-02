@@ -1,7 +1,6 @@
 :root {
   font-family: 'IBM Plex Mono';
 
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -9,7 +8,11 @@
 }
 
 #root.light {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(80, 86, 205, 0.01) 38.1%, rgba(150, 82, 228, 0.06) 70.1%, rgba(195, 80, 242, 0.1) 100%);
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.04) 0%,
+      rgba(80, 86, 205, 0.01) 38.1%,
+      rgba(150, 82, 228, 0.06) 70.1%,
+      rgba(195, 80, 242, 0.1) 100%);
 }
 
 #root.dark {
@@ -19,6 +22,11 @@
 * {
   margin: 0;
   padding: 0;
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
 }
 
 body {
@@ -26,5 +34,4 @@ body {
   display: flex;
   place-items: center;
   overflow-x: hidden;
-  /* padding-top: 50px; */
 }

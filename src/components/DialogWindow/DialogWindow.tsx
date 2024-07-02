@@ -77,7 +77,7 @@ function DialogWindow() {
               </a>
               <strong>{email}</strong>
             </div>
-            <Link className="dialog-window__about-link" to="/about">
+            <Link className="dialog-window__about-link" to="/about#education">
               More Information
             </Link>
           </div>
