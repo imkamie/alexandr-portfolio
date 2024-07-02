@@ -39,7 +39,7 @@ function DialogWindow() {
       </div>
       <div className="dialog-window__container">
         <div className="dialog-window__info">
-          <img src={photo} alt="photo" />
+          <img src={photo} alt="Alexandr Dolgavin's profile photo" />
           <div className="dialog-window__name">
             <div className="dialog-window__icon">
               <TerminalIcon
