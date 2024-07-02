@@ -28,7 +28,7 @@
   display: flex;
   flex-direction: column;
   gap: 51px;
-  scroll-margin: 90px;
+  scroll-margin: 120px;
 }
 
 .about-page__education-info,
@@ -58,25 +58,16 @@
   .about-page {
     max-width: 960px;
   }
-
-  .about-page__section {
-    scroll-margin: 80px;
-  }
 }
 
 @media only screen and (max-width: 1024px) {
   .about-page {
     padding: 120px 60px;
   }
-
-  .about-page__section {
-    scroll-margin: 60px;
-  }
 }
 
 
 @media only screen and (max-width: 768px) {
-
   .about-page h3 {
     font-size: 36px;
   }
@@ -88,6 +79,7 @@
 
   .about-page__section {
     gap: 10px;
+    scroll-margin: 80px;
   }
 }
 
@@ -103,6 +95,7 @@
 
   .about-page__section {
     gap: 15px;
+    scroll-margin: 60px;
   }
 
   .about-page__education-info,

@@ -25,6 +25,11 @@
     text-transform: capitalize;
 }
 
+.header__section.active-section {
+    opacity: 1;
+    font-weight: 600;
+}
+
 .header__section:hover {
     opacity: 1;
     font-weight: 500;
@@ -137,6 +142,11 @@
         opacity: 0.8;
         height: 20px;
         text-transform: capitalize;
+    }
+
+    .header__item.active-section {
+        opacity: 1;
+        font-weight: 600;
     }
 
     .header__item:hover {

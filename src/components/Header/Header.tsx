@@ -1,7 +1,7 @@
 import './Header.css'
 import classNames from 'classnames'
 import React, { useContext, useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 import { Theme, ThemeContext } from '../../hooks/useThemeContext'
 import { useWindowWidth } from '../../hooks/useWindowWidth'
@@ -13,8 +13,40 @@ import SunIcon from '../icons/SunIcon'
 function Header() {
   const { toggleTheme, theme } = useContext(ThemeContext)
   const { width } = useWindowWidth()
+  const location = useLocation()
 
   const [open, setOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState<string>('')
+
+  useEffect(() => {
+    const handleScroll = () => {
+      let currentSection = ''
+      headerSection.forEach((section) => {
+        const element = document.getElementById(section)
+        if (element && window.scrollY >= element.offsetTop - 160) {
+          currentSection = section
+        }
+      })
+      setActiveSection(currentSection)
+    }
+
+    // Set the active section based on the URL hash when the component mounts or when the location changes
+    const handleHashChange = () => {
+      const hash = location.hash.replace('#', '')
+      if (headerSection.includes(hash)) {
+        setActiveSection(hash)
+      } else {
+        setActiveSection('')
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    handleHashChange() // Check hash on component mount
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [location])
 
   const menuRef = React.createRef<HTMLButtonElement>()
 
@@ -55,21 +87,44 @@ function Header() {
       <ul
         className={classNames('header__list', { ['active']: open, ['inactive']: !open })}
       >
-        <Link to="/" className="header__item">
+        <Link
+          to="/"
+          className={classNames('header__item', {
+            ['active-section']: location.pathname === '/',
+          })}
+        >
           Home
         </Link>
         {headerSection.map((item, index) => (
-          <Link to={`/about#${item}`} className="header__item" key={index}>
+          <Link
+            to={`/about#${item}`}
+            className={classNames('header__item', {
+              ['active-section']:
+                location.pathname === '/about' && activeSection === item,
+            })}
+            key={index}
+          >
             {item}
           </Link>
         ))}
       </ul>
 
-      <Link to="/" className="header__section">
+      <Link
+        to="/"
+        className={classNames('header__section', {
+          ['active-section']: location.pathname === '/',
+        })}
+      >
         Home
       </Link>
       {headerSection.map((item, index) => (
-        <Link to={`/about#${item}`} className="header__section" key={index}>
+        <Link
+          to={`/about#${item}`}
+          className={classNames('header__section', {
+            ['active-section']: location.pathname === '/about' && activeSection === item,
+          })}
+          key={index}
+        >
           {item}
         </Link>
       ))}
