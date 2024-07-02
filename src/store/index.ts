@@ -1,3 +1,14 @@
+import {
+  CertificationInfo,
+  EducationInfo,
+  ExperienceInfo,
+  ProjectsInfo,
+  ResearchInfo,
+  RewardsInfo,
+  SkillsInfo,
+  VolunteeringInfo,
+} from '../types'
+
 export const headerSection: string[] = [
   'education',
   'experience',
@@ -25,13 +36,6 @@ export const githubLink = 'https://github.com/esuwu'
 
 export const email = 'mail@mail.com'
 
-export type EducationInfo = {
-  university: string
-  degree: string
-  major: string
-  graduationDate: string
-}
-
 export const EducationInformation: EducationInfo[] = [
   {
     university: 'Auburn University',
@@ -52,14 +56,6 @@ export const EducationInformation: EducationInfo[] = [
     graduationDate: '05/2022',
   },
 ]
-
-export type ExperienceInfo = {
-  position: string
-  company: string
-  locatoin: string
-  dates: string
-  contributions: string[]
-}
 
 export const ExperienceInformation: ExperienceInfo[] = [
   {
@@ -120,14 +116,6 @@ export const ExperienceInformation: ExperienceInfo[] = [
   },
 ]
 
-export type CertificationInfo = {
-  name: string
-  hasLink: boolean
-  link?: string
-  organization: string
-  date: string
-}
-
 export const CertificationsInformation: CertificationInfo[] = [
   {
     name: 'OSCP (Offensive Security Certified Professional)',
@@ -150,11 +138,6 @@ export const CertificationsInformation: CertificationInfo[] = [
     date: '2021',
   },
 ]
-
-export type SkillsInfo = {
-  skillsGroup: string
-  skills: string[]
-}
 
 export const SkillsInformation: SkillsInfo[] = [
   {
@@ -186,13 +169,6 @@ export const SkillsInformation: SkillsInfo[] = [
   },
 ]
 
-export type ResearchInfo = {
-  name: string
-  hasLink: boolean
-  link?: string
-  ongoing: boolean
-}
-
 export const ResearchInformation: ResearchInfo[] = [
   {
     name: 'Sanitizing stenographic channels in STL files, ACM CODASPY 2024',
@@ -212,12 +188,6 @@ export const ResearchInformation: ResearchInfo[] = [
   },
 ]
 
-export type RewardsInfo = {
-  name: string
-  organization: string
-  date: string
-}
-
 export const RewardsInformation: RewardsInfo[] = [
   {
     name: "Outstanding Master's Student Award",
@@ -235,14 +205,6 @@ export const RewardsInformation: RewardsInfo[] = [
     date: '10/2019',
   },
 ]
-
-export type ProjectsInfo = {
-  name: string
-  hasLink: boolean
-  link?: string
-  date: string
-  description: string[]
-}
 
 export const ProjectsInformation: ProjectsInfo[] = [
   {
@@ -266,13 +228,6 @@ export const ProjectsInformation: ProjectsInfo[] = [
     ],
   },
 ]
-
-export type VolunteeringInfo = {
-  position: string
-  organization: string
-  dates: string
-  description: string
-}
 
 export const VolunteeringInformation: VolunteeringInfo[] = [
   {

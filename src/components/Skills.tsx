@@ -1,7 +1,7 @@
 import './Skills.css'
 import { useContext } from 'react'
 
-import { SkillsInfo } from '../store'
+import { SkillsInfo } from '../types'
 
 import TerminalIcon from './icons/TerminalIcon'
 import { ThemeContext } from './ThemeContext'

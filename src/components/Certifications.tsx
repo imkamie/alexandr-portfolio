@@ -1,7 +1,7 @@
 import './Certifications.css'
 import { useContext } from 'react'
 
-import { CertificationInfo } from '../store'
+import { CertificationInfo } from '../types'
 
 import LinkIcon from './icons/LinkIcon'
 import { ThemeContext } from './ThemeContext'

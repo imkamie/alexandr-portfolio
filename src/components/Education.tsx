@@ -1,5 +1,5 @@
 import './Education.css'
-import { EducationInfo } from '../store'
+import { EducationInfo } from '../types'
 
 function Education({ education }: { education: EducationInfo }) {
   return (

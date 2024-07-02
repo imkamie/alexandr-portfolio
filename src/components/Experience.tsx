@@ -1,7 +1,7 @@
 import './Experience.css'
 import { useContext } from 'react'
 
-import { ExperienceInfo } from '../store'
+import { ExperienceInfo } from '../types'
 
 import TerminalIcon from './icons/TerminalIcon'
 import { ThemeContext } from './ThemeContext'

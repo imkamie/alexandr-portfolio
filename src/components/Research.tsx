@@ -1,7 +1,7 @@
 import './Research.css'
 import { useContext } from 'react'
 
-import { ResearchInfo } from '../store'
+import { ResearchInfo } from '../types'
 
 import LinkIcon from './icons/LinkIcon'
 import { ThemeContext } from './ThemeContext'

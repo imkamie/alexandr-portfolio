@@ -1,7 +1,7 @@
 import './Projects.css'
 import { useContext } from 'react'
 
-import { ProjectsInfo } from '../store'
+import { ProjectsInfo } from '../types'
 
 import GithubIcon from './icons/GithubIcon'
 import TerminalIcon from './icons/TerminalIcon'
