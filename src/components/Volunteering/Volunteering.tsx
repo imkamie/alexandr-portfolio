@@ -1,5 +1,5 @@
 import './Volunteering.css'
-import { VolunteeringInfo } from '../types'
+import { VolunteeringInfo } from '../../types'
 
 function Volunteering({ volunteering }: { volunteering: VolunteeringInfo }) {
   return (

@@ -3,13 +3,12 @@ import classNames from 'classnames'
 import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import { Theme, ThemeContext } from '../hooks/useThemeContext'
-import { useWindowWidth } from '../hooks/useWindowWidth'
-import { headerSection } from '../store/index'
-
-import MenuIcon from './icons/MenuIcon'
-import MoonIcon from './icons/MoonIcon'
-import SunIcon from './icons/SunIcon'
+import { Theme, ThemeContext } from '../../hooks/useThemeContext'
+import { useWindowWidth } from '../../hooks/useWindowWidth'
+import { headerSection } from '../../store/index'
+import MenuIcon from '../icons/MenuIcon'
+import MoonIcon from '../icons/MoonIcon'
+import SunIcon from '../icons/SunIcon'
 
 function Header() {
   const { toggleTheme, theme } = useContext(ThemeContext)

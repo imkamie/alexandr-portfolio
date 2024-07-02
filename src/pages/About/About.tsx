@@ -1,16 +1,18 @@
+import './About.css'
+
 import { useContext } from 'react'
 
-import Certifications from '../components/Certifications'
-import Education from '../components/Education'
-import Experience from '../components/Experience'
-import TerminalIcon from '../components/icons/TerminalIcon'
-import Projects from '../components/Projects'
-import Research from '../components/Research'
-import Reward from '../components/Rewards'
-import Skills from '../components/Skills'
-import Volunteering from '../components/Volunteering'
-import { ThemeContext } from '../hooks/useThemeContext'
-import { useWindowWidth } from '../hooks/useWindowWidth'
+import Certifications from '../../components/Certifications/Certifications'
+import Education from '../../components/Education/Education'
+import Experience from '../../components/Experience/Experience'
+import TerminalIcon from '../../components/icons/TerminalIcon'
+import Projects from '../../components/Projects/Projects'
+import Research from '../../components/Research/Research'
+import Reward from '../../components/Rewards/Rewards'
+import Skills from '../../components/Skills/Skills'
+import Volunteering from '../../components/Volunteering/Volunteering'
+import { ThemeContext } from '../../hooks/useThemeContext'
+import { useWindowWidth } from '../../hooks/useWindowWidth'
 import {
   EducationInformation,
   ExperienceInformation,
@@ -20,7 +22,7 @@ import {
   CertificationsInformation,
   ProjectsInformation,
   VolunteeringInformation,
-} from '../store'
+} from '../../store'
 
 function About() {
   const { theme } = useContext(ThemeContext)

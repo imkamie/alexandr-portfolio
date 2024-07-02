@@ -1,4 +1,6 @@
-import DialogWindow from '../components/DialogWindow'
+import './Home.css'
+
+import DialogWindow from '../../components/DialogWindow/DialogWindow'
 
 function Home() {
   return (

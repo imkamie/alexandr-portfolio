@@ -1,10 +1,9 @@
 import './Research.css'
 import { useContext } from 'react'
 
-import { ThemeContext } from '../hooks/useThemeContext'
-import { ResearchInfo } from '../types'
-
-import LinkIcon from './icons/LinkIcon'
+import { ThemeContext } from '../../hooks/useThemeContext'
+import { ResearchInfo } from '../../types'
+import LinkIcon from '../icons/LinkIcon'
 
 function Research({ research }: { research: ResearchInfo }) {
   const { theme } = useContext(ThemeContext)

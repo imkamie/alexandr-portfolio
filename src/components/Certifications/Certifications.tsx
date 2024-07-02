@@ -1,10 +1,9 @@
 import './Certifications.css'
 import { useContext } from 'react'
 
-import { ThemeContext } from '../hooks/useThemeContext'
-import { CertificationInfo } from '../types'
-
-import LinkIcon from './icons/LinkIcon'
+import { ThemeContext } from '../../hooks/useThemeContext'
+import { CertificationInfo } from '../../types'
+import LinkIcon from '../icons/LinkIcon'
 
 function Certifications({ certification }: { certification: CertificationInfo }) {
   const { theme } = useContext(ThemeContext)

@@ -1,5 +1,5 @@
 import './Rewards.css'
-import { RewardsInfo } from '../types'
+import { RewardsInfo } from '../../types'
 
 function Reward({ reward }: { reward: RewardsInfo }) {
   return (
