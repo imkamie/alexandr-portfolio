@@ -1,67 +1,86 @@
 import './Header.css'
-import { headerSection } from '../store/index'
+import classNames from 'classnames'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import { Theme, ThemeContext } from './ThemeContext'
-import React, { useContext, useEffect, useState } from 'react'
+import { headerSection } from '../store/index'
 
+import MenuIcon from './icons/MenuIcon'
 import MoonIcon from './icons/MoonIcon'
 import SunIcon from './icons/SunIcon'
-import MenuIcon from './icons/MenuIcon'
-
-import classNames from 'classnames'
+import { Theme, ThemeContext } from './ThemeContext'
 import { useWindowWidth } from './useWindowWidth'
 
-
 function Header() {
-    const { toggleTheme, theme } = useContext(ThemeContext)
-    const { width } = useWindowWidth()
+  const { toggleTheme, theme } = useContext(ThemeContext)
+  const { width } = useWindowWidth()
 
-    const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false)
 
-    const menuRef = React.createRef<HTMLButtonElement>()
+  const menuRef = React.createRef<HTMLButtonElement>()
 
-    useEffect(() => {
-        const handler = (e: MouseEvent | TouchEvent) => {
-            if (!menuRef.current?.contains(e.target as Node)) {
-                setOpen(false)
-            }
-        }
-
-        window.addEventListener("mousedown", handler)
-        window.addEventListener("touchstart", handler)
-
-        return () => {
-            window.removeEventListener('mousedown', handler)
-            window.removeEventListener("touchstart", handler)
-        }
-    })
-
-    function Icon({ theme }: { theme: Theme }) {
-        if (theme === 'light') return <MoonIcon size={width < 1024 ? 18 : 26} />
-        else return <SunIcon size={width < 1024 ? 20 : 30} />
+  useEffect(() => {
+    const handler = (e: MouseEvent | TouchEvent) => {
+      if (!menuRef.current?.contains(e.target as Node)) {
+        setOpen(false)
+      }
     }
 
+    window.addEventListener('mousedown', handler)
+    window.addEventListener('touchstart', handler)
 
-    return (
-        <div className='header'>
-            <button ref={menuRef} onClick={() => { setOpen(!open) }} className='header__menu-button'> <MenuIcon size={24} /> </button>
+    return () => {
+      window.removeEventListener('mousedown', handler)
+      window.removeEventListener('touchstart', handler)
+    }
+  })
 
-            <ul className={classNames('header__list', { ['active']: open, ['inactive']: !open })}>
-                <Link to="/" className='header__item'>Home</Link>
-                {headerSection.map((item, index) => (
-                    <Link to={`/about#${item}`} className='header__item' key={index}>{item}</Link>
-                ))}
-            </ul>
+  function Icon({ theme }: { theme: Theme }) {
+    if (theme === 'light') return <MoonIcon size={width < 1024 ? 18 : 26} />
+    else return <SunIcon size={width < 1024 ? 20 : 30} />
+  }
 
-            <Link to="/" className='header__section'>Home</Link>
-            {headerSection.map((item, index) => (
-                <Link to={`/about#${item}`} className='header__section' key={index}>{item}</Link>
-            ))}
+  return (
+    <div className="header">
+      <button
+        ref={menuRef}
+        onClick={() => {
+          setOpen(!open)
+        }}
+        className="header__menu-button"
+      >
+        {' '}
+        <MenuIcon size={24} />{' '}
+      </button>
 
-            <button onClick={toggleTheme} className='header__theme-button'> <Icon theme={theme} /> </button>
-        </div>
-    )
+      <ul
+        className={classNames('header__list', { ['active']: open, ['inactive']: !open })}
+      >
+        <Link to="/" className="header__item">
+          Home
+        </Link>
+        {headerSection.map((item, index) => (
+          <Link to={`/about#${item}`} className="header__item" key={index}>
+            {item}
+          </Link>
+        ))}
+      </ul>
+
+      <Link to="/" className="header__section">
+        Home
+      </Link>
+      {headerSection.map((item, index) => (
+        <Link to={`/about#${item}`} className="header__section" key={index}>
+          {item}
+        </Link>
+      ))}
+
+      <button onClick={toggleTheme} className="header__theme-button">
+        {' '}
+        <Icon theme={theme} />{' '}
+      </button>
+    </div>
+  )
 }
 
 export default Header
