@@ -9,6 +9,22 @@ export const headerSection: string[] = [
   'volunteering',
 ]
 
+export const qualifications = [
+  'Alexandr Dolgavin',
+  'Auburn University Grad',
+  'Security Professional',
+  'Researcher',
+]
+
+export const description =
+  "Master's degree in Cybersecurity. OSCP certified with a strong background in software engineering and cybersecurity. 4+ years of experience in cybersecurity, blockchain, and network security. Active participant in CTF and contributor to the security community."
+
+export const linkedinLink = 'https://www.linkedin.com/in/alexander-dolgavin-au/'
+
+export const githubLink = 'https://github.com/esuwu'
+
+export const email = 'mail@mail.com'
+
 export type EducationInfo = {
   university: string
   degree: string

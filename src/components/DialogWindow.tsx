@@ -4,6 +4,7 @@ import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 
 import photo from '../assets/profile.jpg'
+import { qualifications, description, githubLink, linkedinLink, email } from '../store'
 
 import CloseIcon from './icons/CloseIcon'
 import GithubIcon from './icons/GithubIcon'
@@ -14,13 +15,6 @@ import TerminalIcon from './icons/TerminalIcon'
 import { ThemeContext } from './ThemeContext'
 import { TypePhase, useTypedQualification } from './useTypedQualifications'
 import { useWindowWidth } from './useWindowWidth'
-
-const qualifications = [
-  'Alexandr Dolgavin',
-  'Auburn University Grad',
-  'Security Professional',
-  'Researcher',
-]
 
 function DialogWindow() {
   const { typedQualification, selectedQualification, phase, resume } =
@@ -65,37 +59,24 @@ function DialogWindow() {
             </h1>
           </div>
         </div>
-        <p>
-          Master&rsquo;s degree in Cybersecurity. OSCP certified with a strong background
-          in software engineering and cybersecurity. 4+ years of experience in
-          cybersecurity, blockchain, and network security. Active participant in CTF and
-          contributor to the security community.
-        </p>
+        <p>{description}</p>
         <div className="dialog-window__more">
           <strong>Contact Information</strong>
           <div className="dialog-window__details">
             <div className="dialog-window__contacts">
-              <a
-                href="https://www.linkedin.com/in/alexander-dolgavin-au/"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
+              <a href={linkedinLink} target="_blank" rel="noreferrer noopener">
                 <LinkedinIcon
                   size={width < 769 ? 22 : width < 1024 ? 36 : 42}
                   fill={theme === 'light' ? '#000000' : '#FFFFFF'}
                 />
               </a>
-              <a
-                href="https://github.com/esuwu"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
+              <a href={githubLink} target="_blank" rel="noreferrer noopener">
                 <GithubIcon
                   size={width < 769 ? 27 : width < 1024 ? 41 : 47}
                   fill={theme === 'light' ? '#000000' : '#FFFFFF'}
                 />
               </a>
-              <strong>mail@mail.com</strong>
+              <strong>{email}</strong>
             </div>
             <Link className="dialog-window__about-link" to="/about">
               More Information
