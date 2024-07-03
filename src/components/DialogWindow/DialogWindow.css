@@ -88,10 +88,11 @@ h1 {
     letter-spacing: 0.05em;
 }
 
-.dialog-window__contacts strong {
+.dialog-window__contacts a {
     font-weight: 700;
     font-size: 24px;
     letter-spacing: 0.05em;
+    text-decoration: none;
 }
 
 .dialog-window__details {
@@ -133,7 +134,7 @@ h1 {
     }
 
     .dialog-window__more strong,
-    .dialog-window__contacts strong {
+    .dialog-window__contacts a {
         font-size: 22px;
     }
 }
@@ -178,7 +179,7 @@ h1 {
     }
 
     .dialog-window__more strong,
-    .dialog-window__contacts strong {
+    .dialog-window__contacts a {
         font-size: 16px;
     }
 

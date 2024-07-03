@@ -75,7 +75,7 @@ function DialogWindow() {
                   fill={theme === 'light' ? '#000000' : '#FFFFFF'}
                 />
               </a>
-              <strong>{email}</strong>
+              <a href={`mailto:${email}`}>{email}</a>
             </div>
             <Link className="dialog-window__about-link" to="/about#education">
               More Information
