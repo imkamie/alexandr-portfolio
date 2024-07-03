@@ -62,7 +62,7 @@ function DialogWindow() {
         <div className="dialog-window__more">
           <strong>Contact Information</strong>
           <div className="dialog-window__details">
-            <div className="dialog-window__contacts">
+            <address className="dialog-window__contacts">
               <a href={linkedinLink} target="_blank" rel="noreferrer noopener">
                 <LinkedinIcon
                   size={width < 769 ? 22 : width < 1024 ? 36 : 42}
@@ -76,7 +76,7 @@ function DialogWindow() {
                 />
               </a>
               <a href={`mailto:${email}`}>{email}</a>
-            </div>
+            </address>
             <Link className="dialog-window__about-link" to="/about#education">
               More Information
             </Link>

@@ -43,89 +43,87 @@ function About() {
   }
 
   return (
-    <>
-      <div className="about-page">
-        <div id="education" className="about-page__section">
-          <Title title="Education" />
+    <main className="about-page">
+      <section id="education" className="about-page__section">
+        <Title title="Education" />
 
-          <div className="about-page__education-info">
-            {EducationInformation.map((item, index) => (
-              <Education education={item} key={index} />
-            ))}
-          </div>
+        <div className="about-page__education-info">
+          {EducationInformation.map((item, index) => (
+            <Education education={item} key={index} />
+          ))}
         </div>
+      </section>
 
-        <div id="experience" className="about-page__section">
-          <Title title="Experience" />
+      <section id="experience" className="about-page__section">
+        <Title title="Experience" />
 
-          <div className="about-page__experience-info">
-            {ExperienceInformation.map((item, index) => (
-              <Experience experience={item} key={index} />
-            ))}
-          </div>
+        <div className="about-page__experience-info">
+          {ExperienceInformation.map((item, index) => (
+            <Experience experience={item} key={index} />
+          ))}
         </div>
+      </section>
 
-        <div id="certifications" className="about-page__section">
-          <Title title="Certifications" />
+      <section id="certifications" className="about-page__section">
+        <Title title="Certifications" />
 
-          <div className="about-page__certifications-info">
-            {CertificationsInformation.map((item, index) => (
-              <Certifications certification={item} key={index} />
-            ))}
-          </div>
+        <div className="about-page__certifications-info">
+          {CertificationsInformation.map((item, index) => (
+            <Certifications certification={item} key={index} />
+          ))}
         </div>
+      </section>
 
-        <div id="skills" className="about-page__section">
-          <Title title="skills" />
+      <section id="skills" className="about-page__section">
+        <Title title="skills" />
 
-          <div className="about-page__skills-info">
-            {SkillsInformation.map((item, index) => (
-              <Skills skill={item} key={index} />
-            ))}
-          </div>
+        <div className="about-page__skills-info">
+          {SkillsInformation.map((item, index) => (
+            <Skills skill={item} key={index} />
+          ))}
         </div>
+      </section>
 
-        <div id="research" className="about-page__section">
-          <Title title="research" />
+      <section id="research" className="about-page__section">
+        <Title title="research" />
 
-          <div className="about-page__research-info">
-            {ResearchInformation.map((item, index) => (
-              <Research research={item} key={index} />
-            ))}
-          </div>
+        <div className="about-page__research-info">
+          {ResearchInformation.map((item, index) => (
+            <Research research={item} key={index} />
+          ))}
         </div>
+      </section>
 
-        <div id="rewards" className="about-page__section">
-          <Title title="honors & rewards" />
+      <section id="rewards" className="about-page__section">
+        <Title title="honors & rewards" />
 
-          <div className="about-page__rewards-info">
-            {RewardsInformation.map((item, index) => (
-              <Reward reward={item} key={index} />
-            ))}
-          </div>
+        <div className="about-page__rewards-info">
+          {RewardsInformation.map((item, index) => (
+            <Reward reward={item} key={index} />
+          ))}
         </div>
+      </section>
 
-        <div id="projects" className="about-page__section">
-          <Title title="projects" />
+      <section id="projects" className="about-page__section">
+        <Title title="projects" />
 
-          <div className="about-page__projects-info">
-            {ProjectsInformation.map((item, index) => (
-              <Projects project={item} key={index} />
-            ))}
-          </div>
+        <div className="about-page__projects-info">
+          {ProjectsInformation.map((item, index) => (
+            <Projects project={item} key={index} />
+          ))}
         </div>
+      </section>
 
-        <div id="volunteering" className="about-page__section">
-          <Title title="volunteer experience" />
+      <section id="volunteering" className="about-page__section">
+        <Title title="volunteer experience" />
 
-          <div className="about-page__volunteering-info">
-            {VolunteeringInformation.map((item, index) => (
-              <Volunteering volunteering={item} key={index} />
-            ))}
-          </div>
+        <div className="about-page__volunteering-info">
+          {VolunteeringInformation.map((item, index) => (
+            <Volunteering volunteering={item} key={index} />
+          ))}
         </div>
-      </div>
-    </>
+      </section>
+    </main>
   )
 }
 

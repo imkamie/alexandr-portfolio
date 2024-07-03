@@ -72,7 +72,7 @@ function Header() {
   }
 
   return (
-    <div className="header">
+    <header className="header">
       <button
         ref={menuRef}
         onClick={() => {
@@ -84,12 +84,40 @@ function Header() {
         <MenuIcon size={24} />{' '}
       </button>
 
-      <ul
-        className={classNames('header__list', { ['active']: open, ['inactive']: !open })}
-      >
+      <nav>
+        <ul
+          className={classNames('header__list', {
+            ['active']: open,
+            ['inactive']: !open,
+          })}
+        >
+          <Link
+            to="/"
+            className={classNames('header__item', {
+              ['active-section']: location.pathname === '/',
+            })}
+          >
+            Home
+          </Link>
+          {headerSection.map((item, index) => (
+            <Link
+              to={`/about#${item}`}
+              className={classNames('header__item', {
+                ['active-section']:
+                  location.pathname === '/about' && activeSection === item,
+              })}
+              key={index}
+            >
+              {item}
+            </Link>
+          ))}
+        </ul>
+      </nav>
+
+      <nav className="header__nav-desctop">
         <Link
           to="/"
-          className={classNames('header__item', {
+          className={classNames('header__section', {
             ['active-section']: location.pathname === '/',
           })}
         >
@@ -98,7 +126,7 @@ function Header() {
         {headerSection.map((item, index) => (
           <Link
             to={`/about#${item}`}
-            className={classNames('header__item', {
+            className={classNames('header__section', {
               ['active-section']:
                 location.pathname === '/about' && activeSection === item,
             })}
@@ -107,33 +135,13 @@ function Header() {
             {item}
           </Link>
         ))}
-      </ul>
-
-      <Link
-        to="/"
-        className={classNames('header__section', {
-          ['active-section']: location.pathname === '/',
-        })}
-      >
-        Home
-      </Link>
-      {headerSection.map((item, index) => (
-        <Link
-          to={`/about#${item}`}
-          className={classNames('header__section', {
-            ['active-section']: location.pathname === '/about' && activeSection === item,
-          })}
-          key={index}
-        >
-          {item}
-        </Link>
-      ))}
+      </nav>
 
       <button onClick={toggleTheme} className="header__theme-button">
         {' '}
         <Icon theme={theme} />{' '}
       </button>
-    </div>
+    </header>
   )
 }
 
