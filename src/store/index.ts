@@ -34,7 +34,7 @@ export const linkedinLink = 'https://www.linkedin.com/in/alexander-dolgavin-au/'
 
 export const githubLink = 'https://github.com/esuwu'
 
-export const email = 'mail@mail.com'
+export const email = 'a.dolgavin00@gmail.com'
 
 export const EducationInformation: EducationInfo[] = [
   {
