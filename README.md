@@ -23,7 +23,7 @@ To get started with this project, follow these steps:
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/alexandr-portfolio.git
+    git clone https://github.com/imkamie/alexandr-portfolio.git
     cd alexandr-portfolio
     ```
 
