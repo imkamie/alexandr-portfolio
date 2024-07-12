@@ -16,7 +16,10 @@ function Experience({ experience }: { experience: ExperienceInfo }) {
         <div className="experience-info__position">{experience.position}</div>
         <div className="experience-info__dates">{experience.dates}</div>
       </div>
-      <div className="experience-info__location">{experience.locatoin}</div>
+      <div className="experience-info__place">
+        <div className="experience-info__company">{experience.company},</div>
+        <div className="experience-info__location">{experience.locatoin}</div>
+      </div>
       <ul className="experience-info__contributions">
         {experience.contributions.map((item, index) => (
           <li className="experience-info__contribution" key={index}>

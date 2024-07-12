@@ -19,11 +19,24 @@
     color: var(--text-secondary);
 }
 
-.experience-info__location {
+.experience-info__place {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 13px 0 18px;
+    gap: 12px;
+}
+
+.experience-info__company {
     font-weight: 500;
     font-size: 20px;
     letter-spacing: -0.02em;
-    margin: 13px 0 18px;
+}
+
+.experience-info__location {
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: -0.02em;
 }
 
 .experience-info__contributions {
@@ -62,9 +75,13 @@
         font-size: 20px;
     }
 
-    .experience-info__location {
-        font-size: 18px;
+    .experience-info__place {
         margin: 6px 0 10px;
+    }
+
+    .experience-info__location,
+    .experience-info__company {
+        font-size: 18px;
     }
 
     .experience-info__contributions {
@@ -88,9 +105,13 @@
         font-size: 18px;
     }
 
-    .experience-info__location {
-        font-size: 16px;
+    .experience-info__place {
         margin: 5px 0 9px;
+    }
+
+    .experience-info__location,
+    .experience-info__company {
+        font-size: 16px;
     }
 
     .experience-info__icon {
